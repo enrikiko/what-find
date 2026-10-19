@@ -29,6 +29,8 @@ RUN apt-get update \
       libxext6 \
       libxfixes3 \
       libxrandr2 \
+      libzstd1 \
+      zstd \
       xdg-utils \
     && rm -rf /var/lib/apt/lists/*
 
