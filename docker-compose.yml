@@ -4,9 +4,9 @@ services:
     container_name: openwa-automation
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "1000:1000"
     environment:
-      PORT: 3000
+      PORT: 1000
       COUNTRY_CODE: ${COUNTRY_CODE:-34}
       OPENWA_SESSION_ID: ${OPENWA_SESSION_ID:-number-automation}
       OPENWA_REMOTE: ${OPENWA_REMOTE:-false}

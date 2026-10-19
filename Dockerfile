@@ -38,8 +38,8 @@ RUN npm install --omit=dev
 COPY . .
 
 ENV NODE_ENV=production
-ENV PORT=3000
+ENV PORT=1000
 
-EXPOSE 3000
+EXPOSE 1000
 
 CMD ["npm", "start"]
