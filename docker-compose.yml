@@ -3,14 +3,16 @@ services:
     build: .
     container_name: openwa-automation
     restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     ports:
       - "1000:1000"
     environment:
       PORT: 1000
       COUNTRY_CODE: ${COUNTRY_CODE:-34}
       OPENWA_SESSION_ID: ${OPENWA_SESSION_ID:-number-automation}
-      OPENWA_REMOTE: ${OPENWA_REMOTE:-false}
-      OPENWA_IP: ${OPENWA_IP:-127.0.0.1}
+      OPENWA_REMOTE: ${OPENWA_REMOTE:-true}
+      OPENWA_IP: ${OPENWA_IP:-host.docker.internal}
       OPENWA_PORT: ${OPENWA_PORT:-8002}
       OPENWA_API_KEY: ${OPENWA_API_KEY:-}
     volumes:
